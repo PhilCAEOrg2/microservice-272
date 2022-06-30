@@ -116,6 +116,60 @@ public class ResTest {
   }
 
 
+  /**
+   * 
+   * Test for the SimpleGETtesttest_ID65445 method.
+   * 
+   */
+  @Test
+  public void testSimpleGETtesttest_ID65445() {
+    MiniClientCoverage c = new MiniClientCoverage(mainPath);
+    c.setConnectorEndpoint(connector.getHttpEndpoint());
+    
+        
+    try {
+      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
+      ClientResponse result = c.sendRequest("GET", "/test", """
+""", "text/plain", "*/*", new HashMap<>(), new Object[0]);
+      System.out.println("Result of request with id: 131744: " + result.getResponse().trim());
+    
+      Assert.assertEquals("[476269]", 200, result.getHttpCode());
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+
+    
+  }
+  /**
+   * 
+   * Test for the SimpleGETtesttest_ID983066 method.
+   * 
+   */
+  @Test
+  public void testSimpleGETtesttest_ID983066() {
+    MiniClientCoverage c = new MiniClientCoverage(mainPath);
+    c.setConnectorEndpoint(connector.getHttpEndpoint());
+    
+        
+    try {
+      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
+      ClientResponse result = c.sendRequest("GET", "/test", """
+""", "text/plain", "*/*", new HashMap<>(), new Object[0]);
+      System.out.println("Result of request with id: 733934: " + result.getResponse().trim());
+    
+      Assert.assertEquals("[634172]", 200, result.getHttpCode());
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+
+    
+  }
 
 
 
